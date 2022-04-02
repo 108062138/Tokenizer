@@ -1,31 +1,22 @@
-#integer:1
-#integer:22
-#integer:3
-#integer:5
-#integer:6
-#integer:7
-1:1 22 3 5 6 7
-#integer:-0
-#integer:-1
-#integer:-22
-#integer:-33
-at CHAR, currentState = 0 and the process str = '\n'
-
-#char:'\n'+0+1+2+33
-2: -0 -1 -22 -33      '\n'+0 +1 + 2 +33 
-3://+1 +33 +4       
-#float:-0.01
-#float:-0.2
-#float:-0.
-#integer:+3
-#float:+5.55
-#float:+5.
-4:-0.01 -0.2 -0. +3 +5.55  +5.
-#integer:4
-#integer:-3
-#integer:+2
-#op:=
-#integer:3
 #key:int
-#id:a
-#punc:;
+#id:s
+#key:char
+#id:bool
+#id:tmp
+1:int s char bool tmp
+#id:aint
+#id:inta
+#integer:1
+#key:int
+#id:int2
+#id:in
+#id:t3
+#integer:4
+#id:in
+#id:t
+#id:intint
+#id:chaintr
+#id:boo78
+#id:l
+#integer:666
+#id:fd

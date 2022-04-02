@@ -30,7 +30,43 @@ UNDERLINE ("_")
 LSTARCOMMENT ("/*")
 RSTARCOMMENT ("*/")
 %%
-(\+([0-9]+))|([0-9]+)|(\-([0-9]+))  {
+\+{NUMBER}+  {
+    switch(state){
+        case STRING:
+            printf("%s", yytext);
+            break;
+        case SCOMMENT:
+        case MCOMMENT:
+            if(debugFlag==1)printf("HERE~~\n");
+            break;
+        default:
+            if(firstLine==1){
+                    printf("#integer:%s", yytext);
+                    firstLine=0;
+            }else 
+                printf("\n#integer:%s", yytext);
+    }
+    strcat(dest,yytext);
+}
+{NUMBER}+  {
+    switch(state){
+        case STRING:
+            printf("%s", yytext);
+            break;
+        case SCOMMENT:
+        case MCOMMENT:
+            if(debugFlag==1)printf("HERE~~\n");
+            break;
+        default:
+            if(firstLine==1){
+                    printf("#integer:%s", yytext);
+                    firstLine=0;
+            }else 
+                printf("\n#integer:%s", yytext);
+    }
+    strcat(dest,yytext);
+}
+\-{NUMBER}+  {
     switch(state){
         case STRING:
             printf("%s", yytext);
@@ -175,9 +211,30 @@ RSTARCOMMENT ("*/")
     }
     strcat(dest,yytext);
 }
-
+\'  {
+    switch(state){
+        case STRING:
+            printf("%s",yytext);
+            state=NONE;
+            break;
+        case SCOMMENT:
+        case MCOMMENT:
+            break;
+        case CHAR:
+            printf("NOTHING~~~~\n");
+        default:
+            state=CHAR;
+            if(firstLine==1){
+                firstLine=0;
+                printf("#cha");printf("r:%s",yytext);
+            }else {
+                printf("\n#cha");printf("r:%s",yytext);
+            }
+    }
+    strcat(dest,yytext);
+}
 \'({ASCII1}|{ASCII2}|{ASCII3}|{ESC})\'  {
-    printf("\nat CHAR, currentState = %d and the process str = %s\n", state, yytext);
+    if(debugFlag==1)printf("\nat right CHAR, currentState = %d and the process str = %s\n", state, yytext);
     switch(state){
         case STRING:
             printf("%s",yytext);
@@ -187,13 +244,16 @@ RSTARCOMMENT ("*/")
         case MCOMMENT:
             break;
         default:
-            state=STRING;
+            state=NONE;
             if(firstLine==1){
                 firstLine=0;
-                printf("#cha");printf("r:%s",yytext);
+                printf("#c");
+                printf("har:%s",yytext);
             }else {
-                printf("\n#cha");printf("r:%s",yytext);
+                printf("\n#c");
+                printf("har:%s",yytext);
             }
+            if(debugFlag==1)printf("FAIL INPUT:%s~~~\n", yytext);
     }
     strcat(dest,yytext);
 }
@@ -219,7 +279,6 @@ RSTARCOMMENT ("*/")
 }
 
 {ONEOP} {
-    if(debugFlag==1)printf("\nat 1op, currentState = %d and the process str = %s\n", state, yytext);
     switch(state){
         case STRING:
             printf("%s", yytext);

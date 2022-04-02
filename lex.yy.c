@@ -351,8 +351,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 19
-#define YY_END_OF_BUFFER 20
+#define YY_NUM_RULES 22
+#define YY_END_OF_BUFFER 23
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -362,80 +362,80 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[682] =
     {   0,
-        0,    0,    0,    0,    0,    0,    0,    0,   20,   19,
-       18,   17,   11,    8,   19,   11,   11,   19,   13,   11,
-       11,   11,   11,    1,   11,   11,   11,   16,   16,   16,
-       16,   16,   16,   19,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   11,   10,
-        0,    0,    0,    0,    0,    5,    1,    1,    4,    6,
-        2,    1,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,    7,   16,   16,   16,   16,   16,
-       16,   12,   16,   16,   16,   12,   16,   16,   16,   16,
+        0,    0,    0,    0,    0,    0,    0,    0,   23,   22,
+       21,   20,   14,   10,   22,   14,   14,   11,   16,   14,
+       14,   14,   14,    2,   14,   14,   14,   19,   19,   19,
+       19,   19,   19,   22,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   14,   13,
+        0,    0,    0,    0,    0,    7,    1,    3,    6,    8,
+        4,    2,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,    9,   19,   19,   19,   19,   19,
+       19,   15,   19,   19,   19,   15,   19,   19,   19,   19,
 
-       16,   16,   16,   16,   16,   16,    0,    9,    0,    9,
-        0,    0,    0,    0,    0,    2,    2,    2,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   14,   14,   16,   16,
-       16,   16,   16,   16,   16,   16,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   16,   16,   12,   15,   15,   15,   12,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,    0,
+       19,   19,   19,   19,   19,   19,    0,   12,    0,   12,
+        0,    0,    0,    0,    0,    4,    4,    4,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   17,   17,   19,   19,
+       19,   19,   19,   19,   19,   19,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   19,   19,   15,   18,   18,   18,   15,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,    0,
 
-        0,    0,    0,    0,    2,    2,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       12,   16,   16,   16,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
+        0,    0,    0,    0,    4,    4,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       15,   19,   19,   19,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
 
-       15,   15,   15,   16,   15,   15,   15,   16,   16,   16,
-       16,   16,   16,   12,   16,    0,    0,    0,    0,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   15,   12,   16,
-       16,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
+       18,   18,   18,   19,   18,   18,   18,   19,   19,   19,
+       19,   19,   19,   15,   19,    0,    0,    0,    0,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   18,   15,   19,
+       19,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
 
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   16,   16,   16,   16,   16,   15,
-       15,    0,    0,    0,    0,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   15,   15,   16,   16,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   19,   19,   19,   19,   19,   18,
+       18,    0,    0,    0,    0,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   18,   18,   19,   19,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
 
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       12,   15,   15,   15,   15,   15,   12,   16,   15,   15,
-        0,    0,    0,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-       15,   15,   16,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   16,   15,   15,    0,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       15,   18,   18,   18,   18,   18,   15,   19,   18,   18,
+        0,    0,    0,   19,   19,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19,   19,   19,   19,   19,
+       18,   18,   19,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   19,   18,   18,    0,
 
-        0,    0,   16,   16,   16,   16,   16,   16,   16,   14,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   12,   15,   15,    0,    0,    0,
-        0,   16,   16,   16,   16,   15,   15,   15,   15,   15,
-       15,   15,   15,   15,   15,   15,    0,    0,    0,   16,
-       16,   15,   15,   15,   15,   15,    0,    0,   15,   15,
-        0,    0,    0,    0,    0,    0,    0,    0,    0,    3,
+        0,    0,   19,   19,   19,   19,   19,   19,   19,   17,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   15,   18,   18,    0,    0,    0,
+        0,   19,   19,   19,   19,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,    0,    0,    0,   19,
+       19,   18,   18,   18,   18,   18,    0,    0,   18,   18,
+        0,    0,    0,    0,    0,    0,    0,    0,    0,    5,
         0
     } ;
 
@@ -1499,6 +1499,50 @@ YY_RULE_SETUP
             break;
         case SCOMMENT:
         case MCOMMENT:
+            if(debugFlag==1)printf("HERE~~\n");
+            break;
+        default:
+            if(firstLine==1){
+                    printf("#integer:%s", yytext);
+                    firstLine=0;
+            }else 
+                printf("\n#integer:%s", yytext);
+    }
+    strcat(dest,yytext);
+}
+	YY_BREAK
+case 3:
+YY_RULE_SETUP
+#line 69 "scanner.l"
+{
+    switch(state){
+        case STRING:
+            printf("%s", yytext);
+            break;
+        case SCOMMENT:
+        case MCOMMENT:
+            if(debugFlag==1)printf("HERE~~\n");
+            break;
+        default:
+            if(firstLine==1){
+                    printf("#integer:%s", yytext);
+                    firstLine=0;
+            }else 
+                printf("\n#integer:%s", yytext);
+    }
+    strcat(dest,yytext);
+}
+	YY_BREAK
+case 4:
+YY_RULE_SETUP
+#line 87 "scanner.l"
+{
+    switch(state){
+        case STRING:
+            printf("%s", yytext);
+            break;
+        case SCOMMENT:
+        case MCOMMENT:
             break;
         default:
             if(firstLine==1){
@@ -1513,10 +1557,10 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 3:
-/* rule 3 can match eol */
+case 5:
+/* rule 5 can match eol */
 YY_RULE_SETUP
-#line 71 "scanner.l"
+#line 107 "scanner.l"
 {
     switch(state){
         case STRING:
@@ -1530,9 +1574,9 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 4:
+case 6:
 YY_RULE_SETUP
-#line 83 "scanner.l"
+#line 119 "scanner.l"
 {
     if(debugFlag==1)printf("\nMEET LSTAR~~~\n");
     switch(state){
@@ -1554,9 +1598,9 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 5:
+case 7:
 YY_RULE_SETUP
-#line 103 "scanner.l"
+#line 139 "scanner.l"
 {
     if(debugFlag==1){
         printf("\nMEET RSTAR~~~\n");
@@ -1585,9 +1629,9 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 6:
+case 8:
 YY_RULE_SETUP
-#line 131 "scanner.l"
+#line 167 "scanner.l"
 {
     switch(state){
         case STRING:
@@ -1603,9 +1647,9 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 7:
+case 9:
 YY_RULE_SETUP
-#line 145 "scanner.l"
+#line 181 "scanner.l"
 {
     switch(state){
         case STRING:
@@ -1620,9 +1664,9 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 8:
+case 10:
 YY_RULE_SETUP
-#line 158 "scanner.l"
+#line 194 "scanner.l"
 {
     switch(state){
         case STRING:
@@ -1644,11 +1688,10 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 9:
+case 11:
 YY_RULE_SETUP
-#line 179 "scanner.l"
+#line 214 "scanner.l"
 {
-    printf("\nat CHAR, currentState = %d and the process str = %s\n", state, yytext);
     switch(state){
         case STRING:
             printf("%s",yytext);
@@ -1657,8 +1700,10 @@ YY_RULE_SETUP
         case SCOMMENT:
         case MCOMMENT:
             break;
+        case CHAR:
+            printf("NOTHING~~~~\n");
         default:
-            state=STRING;
+            state=CHAR;
             if(firstLine==1){
                 firstLine=0;
                 printf("#cha");printf("r:%s",yytext);
@@ -1669,9 +1714,37 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 10:
+case 12:
 YY_RULE_SETUP
-#line 201 "scanner.l"
+#line 236 "scanner.l"
+{
+    if(debugFlag==1)printf("\nat right CHAR, currentState = %d and the process str = %s\n", state, yytext);
+    switch(state){
+        case STRING:
+            printf("%s",yytext);
+            state=NONE;
+            break;
+        case SCOMMENT:
+        case MCOMMENT:
+            break;
+        default:
+            state=NONE;
+            if(firstLine==1){
+                firstLine=0;
+                printf("#c");
+                printf("har:%s",yytext);
+            }else {
+                printf("\n#c");
+                printf("har:%s",yytext);
+            }
+            if(debugFlag==1)printf("FAIL INPUT:%s~~~\n", yytext);
+    }
+    strcat(dest,yytext);
+}
+	YY_BREAK
+case 13:
+YY_RULE_SETUP
+#line 261 "scanner.l"
 {
     if(debugFlag==1)printf("\nat 2op, currentState = %d and the process str = %s\n", state, yytext);
     switch(state){
@@ -1692,11 +1765,10 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 11:
+case 14:
 YY_RULE_SETUP
-#line 221 "scanner.l"
+#line 281 "scanner.l"
 {
-    if(debugFlag==1)printf("\nat 1op, currentState = %d and the process str = %s\n", state, yytext);
     switch(state){
         case STRING:
             printf("%s", yytext);
@@ -1715,9 +1787,9 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 12:
+case 15:
 YY_RULE_SETUP
-#line 241 "scanner.l"
+#line 300 "scanner.l"
 {
     switch(state){
         case STRING:
@@ -1737,9 +1809,9 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 13:
+case 16:
 YY_RULE_SETUP
-#line 261 "scanner.l"
+#line 320 "scanner.l"
 {
     if(debugFlag==1)printf("\nat punc, currentState = %d and the process str = %s\n", state, yytext);
     switch(state){
@@ -1760,9 +1832,9 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 14:
+case 17:
 YY_RULE_SETUP
-#line 280 "scanner.l"
+#line 339 "scanner.l"
 {
     switch(state){
         case STRING:
@@ -1782,9 +1854,9 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 15:
+case 18:
 YY_RULE_SETUP
-#line 299 "scanner.l"
+#line 358 "scanner.l"
 {
     switch(state){
         case STRING:
@@ -1804,9 +1876,9 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 16:
+case 19:
 YY_RULE_SETUP
-#line 318 "scanner.l"
+#line 377 "scanner.l"
 {
     switch(state){
         case STRING:
@@ -1826,29 +1898,29 @@ YY_RULE_SETUP
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 17:
-/* rule 17 can match eol */
+case 20:
+/* rule 20 can match eol */
 YY_RULE_SETUP
-#line 337 "scanner.l"
+#line 396 "scanner.l"
 {
     if(state!=3)state=NONE;
     lineCnt++;printf("\n%d:%s", lineCnt,dest);
     strcpy(dest,"");
 }
 	YY_BREAK
-case 18:
+case 21:
 YY_RULE_SETUP
-#line 343 "scanner.l"
+#line 402 "scanner.l"
 {
     strcat(dest,yytext);
 }
 	YY_BREAK
-case 19:
+case 22:
 YY_RULE_SETUP
-#line 346 "scanner.l"
+#line 405 "scanner.l"
 ECHO;
 	YY_BREAK
-#line 1852 "lex.yy.c"
+#line 1924 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(SINGLELINECOMMENT):
 case YY_STATE_EOF(MULTIPLELINECOMMENT):
@@ -2856,7 +2928,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 346 "scanner.l"
+#line 405 "scanner.l"
 
 
 int main(int argc, char* argv[]){
