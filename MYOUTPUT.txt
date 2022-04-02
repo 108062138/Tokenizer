@@ -1,0 +1,31 @@
+#integer:1
+#integer:22
+#integer:3
+#integer:5
+#integer:6
+#integer:7
+1:1 22 3 5 6 7
+#integer:-0
+#integer:-1
+#integer:-22
+#integer:-33
+at CHAR, currentState = 0 and the process str = '\n'
+
+#char:'\n'+0+1+2+33
+2: -0 -1 -22 -33      '\n'+0 +1 + 2 +33 
+3://+1 +33 +4       
+#float:-0.01
+#float:-0.2
+#float:-0.
+#integer:+3
+#float:+5.55
+#float:+5.
+4:-0.01 -0.2 -0. +3 +5.55  +5.
+#integer:4
+#integer:-3
+#integer:+2
+#op:=
+#integer:3
+#key:int
+#id:a
+#punc:;
