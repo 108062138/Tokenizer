@@ -1,9 +1,16 @@
 Tokenizer
 === 
-108062138 Po-Yu,Wu
-## PRAGMA NOTES
-### ORTHOGONAL
+108062138 Po-Yu,Wu 
+source code: https://github.com/108062138/Tokenizer.git
+
+## PRAGMA NOTES:
+- It is composed of three parts:conclusion, pragma source, and pragma token. The idea about pragma is shown in the conclusion part. As for the each detailed effect, see pragama source and pragma token part. 
+### CONCLUSION(PLACED AT THE TOP TO LEVEL KNOWLEDGE ABSORBING DIFFICULTY):
 **THOSE TWO FLAGS ARE ORTHOGONAL. SEE THE FOLLOW TABLE**
+|            | `TOKEN ON`         | `TOKEN OFF`                         |
+|------------|------------------|-----------------------------------|
+| `SOURCE ON`  | SHOW EVERYTHING  | ONLY BUFFER LINE APPEARS          |
+| `SOURCE OFF` | ONLY SHOWS TOKEN | SHOW NEIGHOR BUFFER LINE OR TOKEN |
 ### PRAGMA SOURCE
 - `pragma source on`: normal display the line buffer
 > sample input: `int a = 5;`
@@ -34,17 +41,27 @@ Tokenizer
 	#punc:=
 	#:num:5
 	#punc:;
-	[5]int a = 5;
+	[5]int a = 5;<-shown
 ```
 - `pragma token off`: hide the parsed token
 > sample input: `int a = 5;`
 ```javascript=
-	
-
-
-
-
+			<-disappear!	
+			<-disappear!
+			<-disappear!
+			<-disappear!
+			<-disappear!
 	[5]int a = 5;
 ```
 
-
+### ORTHOGONAL
+- `pragma token off` AND `pragma source off`: hide everything...
+> sample input: `int a = 5;`
+```javascript=
+			<-disappear!	
+			<-disappear!
+			<-disappear!
+			<-disappear!
+			<-disappear!
+			<-disappear!
+```
