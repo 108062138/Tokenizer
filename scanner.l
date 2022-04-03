@@ -15,7 +15,7 @@ MACRO ("NULL"|"__COUNTER__"|"__LINE__"|"INT_MAX"|"INT_MIN"|"CHAR_MAX"|"CHAR_MIN"
 PUNC (":"|";"|","|"."|"["|"]"|"("|")"|"{"|"}")
 ESC ("\\a"|"\\b"|"\\e"|"\\f"|"\\n"|"\\r"|"\\t"|"\\v"|"\\\\"|"\\\'"|"\\\""|"\\\?"|"\\nnn"|"\\xhh..."|"\\uhhhh"|"\\Uhhhhhhhh")
 LOWERCASE ("a"|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"|"n"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z")
-UPPERCASE ("A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"|"N"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"S"|"Y"|"Z")
+UPPERCASE ("A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"|"N"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z")
 NUMBER ("0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9")
 
 ASCII1 (" "|"!"|"\\\""|"#"|"$"|"%"|"&"|"\\\'"|"("|")"|"*"|"+"|","|"-"|"."|"/"|"0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|":"|";"|"<"|"="|">"|"\\\?")
@@ -355,6 +355,8 @@ RSTARCOMMENT ("*/")
     strcat(dest,yytext);
 }
 
+
+
 ({KEYWORD})+({LOWERCASE}|{UPPERCASE}|{UNDERLINE}|{KEYWORD}|{NUMBER})+  {
     switch(state){
         case STRING:
@@ -400,6 +402,15 @@ RSTARCOMMENT ("*/")
 }
 
 \t|" " {
+    switch(state){
+        case STRING:
+            printf("%s", yytext);
+            break;
+        case SCOMMENT:
+        case MCOMMENT:
+        default:
+            break;
+    }
     strcat(dest,yytext);
 }
 %%
