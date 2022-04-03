@@ -1,39 +1,17 @@
-1:#pragma token    on
-2:#pragma source	 on 
-#string:"#pragma 	source	off"
-3:"#pragma 	source	off"
-#id:rin
-#op:=
-#id:abcd
-#integer:+1
-#punc:;
-#key:double
+1:
+#id:df
 #key:int
-#punc:;
-#id:a
+#id:a1
 #op:=
-#integer:5
-#punc:;
-#integer:1
-#integer:2
 #integer:3
-#integer:4
-#char:'1'
-#string:"\""
-8:#pragma source 				on 
-#key:int
-#id:tmp
 #punc:;
-#string:"ddddd"
-9:int tmp	  ;   "ddddd"
+2:df int a1 =3;
+#id:dfd
+#key:float
+#id:key
 #key:int
-#id:a
-#punc:;
-#string:"123"
-#char:'a'
-#char:'$'
-#char:'\n'
-10:int a; "123" 'a' '$' '\n' 
-11:#pragma token off
-12:int a;
-13:int b; ddddddd int5 5int56int>= == =
+#id:put
+3:dfd float key int put //define	fdf  d fdfd
+4:
+#id:dfdsf
+5:dfdsf 

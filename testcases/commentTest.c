@@ -1,6 +1,6 @@
 int a;/*normal line*/
 double k =1.98	;//single quo;! haha \a \b \c \d 
-double j= 25;/* amyLiao>_<
+double j= 25;/* the int result....>_<
 		plz
 
 reply ME....
@@ -15,6 +15,6 @@ reply ME....
 bool 123int45char5 int 4 5 ;
 
 
-"amy" ;			
+"fAMilY" ;			
 int s char bool tmp
 aint inta 1int int2 in t3   4in t intint chaintr boo78 l 666            fd

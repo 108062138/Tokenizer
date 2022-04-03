@@ -8,6 +8,10 @@ double int; a=5;
 #pragma source 				on 
 int tmp	  ;   "ddddd"
 int a; "123" 'a' '$' '\n' 
-#pragma token off
+#pragma token	 off
 int a;
 int b; ddddddd int5 5int56int>= == =
+
+#pragma token						on
+in t 1 fake 112.5 -12.65 +6.5 5555 't' /*fdf  
+					 *dfdf//  dfkjkldaj 12312 4t4-0toq34 dd*/
