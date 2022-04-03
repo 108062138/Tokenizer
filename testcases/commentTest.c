@@ -5,12 +5,16 @@ double j= 25;/* amyLiao>_<
 
 reply ME....
 */char test//comment
-/* 123 45.6 7
- *
+/* 12**/*+8++8+5+5+56+565+++959+565656
+53 45.6 7
+ /*
  *
  * 68 +7-8
  * \b \a \t wtf amy...
- * i	\a \b \c //+ 9;*/
+ * i	\a \b \c*/ dd //+ 9;/* hack
+bool 123int45char5 int 4 5 ;
 
+
+"amy" ;			
 int s char bool tmp
 aint inta 1int int2 in t3   4in t intint chaintr boo78 l 666            fd

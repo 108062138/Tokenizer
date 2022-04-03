@@ -1,52 +1,39 @@
+1:#pragma token    on
+2:#pragma source	 on 
+#string:"#pragma 	source	off"
+3:"#pragma 	source	off"
+#id:rin
+#op:=
+#id:abcd
+#integer:+1
+#punc:;
+#key:double
+#key:int
+#punc:;
+#id:a
+#op:=
+#integer:5
+#punc:;
+#integer:1
+#integer:2
+#integer:3
+#integer:4
+#char:'1'
+#string:"\""
+8:#pragma source 				on 
+#key:int
+#id:tmp
+#punc:;
+#string:"ddddd"
+9:int tmp	  ;   "ddddd"
 #key:int
 #id:a
 #punc:;
-1:int a;/*normal line*/
-#key:double
-#id:k
-#op:=
-#float:1.98
-#punc:;
-2:double k =1.98	;//single quo;! haha \a \b \c \d 
-#key:double
-#id:j
-#op:=
-#integer:25
-#punc:;
-3:double j= 25;/* amyLiao>_<
-4:		plz
-5:
-6:reply ME....
-#key:char
-#id:test
-7:*/char test//comment
-8:/* 123 45.6 7
-9: *
-10: *
-11: * 68 +7-8
-12: * \b \a \t wtf amy...
-13: * i	\a \b \c //+ 9;*/
-14:
-#key:int
-#id:s
-#key:char
-#id:bool
-#id:tmp
-15:int s char bool tmp
-#id:aint
-#id:inta
-#integer:1
-#key:int
-#id:int2
-#id:in
-#id:t3
-#integer:4
-#id:in
-#id:t
-#id:intint
-#id:chaintr
-#id:boo78
-#id:l
-#integer:666
-#id:fd
-16:aint inta 1int int2 in t3   4in t intint chaintr boo78 l 666            fd
+#string:"123"
+#char:'a'
+#char:'$'
+#char:'\n'
+10:int a; "123" 'a' '$' '\n' 
+11:#pragma token off
+12:int a;
+13:int b; ddddddd int5 5int56int>= == =
