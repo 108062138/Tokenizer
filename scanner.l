@@ -309,7 +309,7 @@ RSTARCOMMENT ("*/")
 }
 
 {ONEOP} {
-    if(tokenOn=1){
+    if(tokenOn==1){
         switch(state){
             case STRING:
                 printf("%s", yytext);
@@ -440,7 +440,14 @@ RSTARCOMMENT ("*/")
 \n {
     if(state!=3)state=NONE;
     lineCnt++;
-    if(sourceOn==1)printf("\n%d:%s", lineCnt,dest);
+    if(sourceOn==1){
+        if(firstLine==1){
+            printf("%d:%s", lineCnt,dest);
+            firstLine = 0;
+        }else{
+            printf("\n%d:%s", lineCnt,dest);
+        }
+    }
     strcpy(dest,"");
 }
 

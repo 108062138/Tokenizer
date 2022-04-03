@@ -1,6 +1,6 @@
-
 1:#pragma token    on
-2:#pragma source	 on #string:"#pragma 	source	off"
+2:#pragma source	 on 
+#string:"#pragma 	source	off"
 3:"#pragma 	source	off"
 #id:rin
 #op:=
@@ -36,5 +36,4 @@
 10:int a; "123" 'a' '$' '\n' 
 11:#pragma token off
 12:int a;
-#op:=
 13:int b; ddddddd int5 5int56int>= == =

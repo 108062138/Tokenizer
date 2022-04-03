@@ -1823,7 +1823,7 @@ case 15:
 YY_RULE_SETUP
 #line 311 "scanner.l"
 {
-    if(tokenOn=1){
+    if(tokenOn==1){
         switch(state){
             case STRING:
                 printf("%s", yytext);
@@ -1971,13 +1971,20 @@ YY_RULE_SETUP
 {
     if(state!=3)state=NONE;
     lineCnt++;
-    if(sourceOn==1)printf("\n%d:%s", lineCnt,dest);
+    if(sourceOn==1){
+        if(firstLine==1){
+            printf("%d:%s", lineCnt,dest);
+            firstLine = 0;
+        }else{
+            printf("\n%d:%s", lineCnt,dest);
+        }
+    }
     strcpy(dest,"");
 }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 447 "scanner.l"
+#line 454 "scanner.l"
 {
     if(tokenOn==1){
         switch(state){
@@ -1995,7 +2002,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 462 "scanner.l"
+#line 469 "scanner.l"
 {
     if(tokenOn==1){
         switch(state){
@@ -2013,10 +2020,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 476 "scanner.l"
+#line 483 "scanner.l"
 ECHO;
 	YY_BREAK
-#line 2020 "lex.yy.c"
+#line 2027 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(SINGLELINECOMMENT):
 case YY_STATE_EOF(MULTIPLELINECOMMENT):
@@ -3024,7 +3031,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 476 "scanner.l"
+#line 483 "scanner.l"
 
 
 int main(int argc, char* argv[]){
