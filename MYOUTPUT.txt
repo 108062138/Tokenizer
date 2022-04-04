@@ -1,17 +1,57 @@
-1:
-#id:df
+#char:'a'
+#string:"dddd	  	123"
+1:'a'	"dddd	  	123"
+#string:"123	"
+2:"123	"
+#string:"int a"
+#string:"/**/"
+3:"int a" "/**/" //david~~~~ heheahha~~~ */
+4:/* \n\a\b\c\t\ff"~~~~_AAAA"
+5: * auto text
+6: * alone
+7: * together 
+8: * alone
+9: * ~~~~
+#op:*
 #key:int
-#id:a1
-#op:=
-#integer:3
+#op:*
+#id:string
+#op:*
+#key:int
 #punc:;
-2:df int a1 =3;
-#id:dfd
-#key:float
-#id:key
+#op:*
+#op:++
+#op:++
+#op:++
+#op:+
+#op:--
+#op:--
+#op:==
+#op:++
+#op:-
+#op:=
+#op:-
+#op:=
+#string:"~\'\"\"\"\"\""
+#id:pins
+10: */  		*int*string*int;/*dddd*/*+++++++----==++-=-="~\'\"\"\"\"\""pins			//
+#string:"tmp \" hah\"\" \t \a he	he\'"
 #key:int
-#id:put
-3:dfd float key int put //define	fdf  d fdfd
-4:
-#id:dfdsf
-5:dfdsf 
+#id:a
+#punc:;
+11:"tmp \" hah\"\" \t \a he	he\'" int a	;
+#string:"test~~..."
+#key:for
+#key:int
+#op:=
+#integer:1
+#punc:(
+#punc:;
+#punc:)
+#integer:+1
+#op:++
+#char:'@'
+#char:'\n'
+#char:'s'
+#string:"a123v df  \n \a \b\c\"\'\"\"\"    /**//*** same*/__"
+12:"test~~..." for	int=1(;)+1++'@'	'\n'	's' "a123v df  \n \a \b\c\"\'\"\"\"    /**//*** same*/__"
