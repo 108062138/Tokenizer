@@ -4,10 +4,11 @@ GREEN='\033[0;32m';
 BLUE='\033[0;35m';
 RED='\033[0;31m';
 END='\033[0m';
-flex scanner.l;
-gcc -o scanner lex.yy.c -lfl;
+
 
 for FILE in ./testcases/*;do
+flex scanner.l;
+gcc -o scanner lex.yy.c -lfl;
 ./scanner < $FILE > MYOUTPUT.txt;
 golden_scanner < $FILE > GOLDENOUTPUT.txt;
 DIFF=$(diff MYOUTPUT.txt GOLDENOUTPUT.txt);

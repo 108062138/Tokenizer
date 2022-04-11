@@ -1,2 +1,5 @@
-int s char bool tmp
-aint inta 1int int2 in t3   4in t intint chaintr boo78 l 666            fd
+iint s char bool tmp iint init intintintint int a 	
+aint inta 1int int2 in t3   4in t intint chaintr boo78 l 666            fd 
+123 123int -132float321-
+for do whil      	e while do continue if 
+else	return 1return return1 struct1 struswitchct case endcase case bool int boolintbool defalt def ault def		default void int float chchar 123cha12r cha		r char conSt const cn conSST sign unsigned unsignedsign signunsigned sign signed un un long int ii int 123 unsigned UNsigned

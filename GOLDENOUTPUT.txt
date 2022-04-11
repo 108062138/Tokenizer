@@ -55,3 +55,79 @@
 #char:'s'
 #string:"a123v df  \n \a \b\c\"\'\"\"\"    /**//*** same*/__"
 12:"test~~..." for	int=1(;)+1++'@'	'\n'	's' "a123v df  \n \a \b\c\"\'\"\"\"    /**//*** same*/__"
+#punc:.
+#id:dfds
+#punc:.
+#punc:.
+#punc:,
+#punc:,
+#punc:,
+#punc:.
+#punc:.
+#id:dfd
+#float:1.
+#punc:,
+#punc:,
+#punc:.
+#punc:,
+#integer:4545
+#string:"dfds sdkfjsd                                   "
+#string:"dfd 123 \n \n\\\\\\\n"
+13:.dfds ..,,,..dfd 1.,,.,4545 "dfds sdkfjsd                                   " "dfd 123 \n \n\\\\\\\n"
+#string:"dsfdf tmp filone 123@@@@@ ********\*\*\\\\*\___~~~~~>"
+#string:":{()#$EWWE      E ....EJ}        "
+14:"dsfdf tmp filone 123@@@@@ ********\*\*\\\\*\___~~~~~>"":{()#$EWWE      E ....EJ}        "
+15:
+16:
+#key:int
+#id:aa
+#punc:;
+#punc:;
+#id:dfd
+#id:sstl
+#punc:;
+#string:"a12321 0-9-985443-05>:"
+17:int aa;; dfd sstl;  "a12321 0-9-985443-05>:"
+#punc:{
+#punc:}
+#punc:}
+#punc:}
+#op:||
+#op:|
+#punc:{
+#punc:{
+#punc:{
+#punc:{
+18:{}}}|||{{{{
+#string:"~!!!@#$"
+19:    "~!!!@#$"
+#op:%
+#integer:5555
+#op:%
+#op:%
+#op:%
+#op:++
+#op:++
+#op:--
+#op:--
+#op:--
+#integer:00
+20:    %5555%%%++++------00
+#integer:0
+#op:%
+#op:%
+#op:&
+#op:*
+#punc:(
+21:    0%%&*(
+#punc:)
+#op:+
+#punc:}
+#punc:{
+#punc::
+22:    )+}{:
+#string:"<>~~<>?"
+#punc:}
+#punc:}
+#punc:}
+#punc:}

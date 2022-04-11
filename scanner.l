@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #include"tokenList.h"
-char dest[300] = "";
+char dest[600] = "";
 int debugFlag = 0;//1 for debug, and 0 for produce 
 int lineCnt = 0;
 int firstLine=1;//1 for first, otherwise 0
@@ -20,7 +20,7 @@ LOWERCASE ("a"|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"|"n"|"o"|"p"|"q"|"
 UPPERCASE ("A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"|"N"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z")
 NUMBER ("0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9")
 
-ASCII1 (" "|"!"|"\\\""|"#"|"$"|"%"|"&"|"\\\'"|"("|")"|"*"|"+"|","|"-"|"."|"/"|"0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|":"|";"|"<"|"="|">"|"\\\?")
+ASCII1 (" "|"!"|"\\\""|"#"|"$"|"%"|"&"|"\\\'"|"("|")"|"*"|"+"|","|"-"|"."|"/"|"0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|":"|";"|"<"|"="|">"|"\\\?"|"?")
 ASCII2 ("@"|"A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"|"N"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"["|"\\"|"]"|"^"|"_")
 ASCII3 ("`"|"a"|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"|"n"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|"{"|"|"|"}"|"~")
 COMMENT ("//")
@@ -52,7 +52,7 @@ RSTARCOMMENT ("*/")
     }
     strcat(dest,yytext);
 }
-(\+([0-9]+\.[0-9]*))|([0-9]+\.[0-9]*)|(\-([0-9]+\.[0-9]*))  {
+(\+([0-9]+\.[0-9]*))|([0-9]+\.[0-9]*)|(\-([0-9]+\.[0-9]*)|(\.[0-9]+)|(\+\.[0-9]+)|(\-\.[0-9]+))  {
     if(tokenOn==1){
         switch(state){
             case STRING:
@@ -182,22 +182,7 @@ RSTARCOMMENT ("*/")
     strcat(dest,yytext);
 }
 
-{COMMENT} {
-    if(tokenOn==1){
-        switch(state){
-            case STRING:
-                printf("%s",yytext);
-                break;
-            case SCOMMENT:
-            case MCOMMENT:
-                break;
-            default:
-                if(debugFlag==1)printf("START SINGLE LINE COMMENT\n");
-                state=SCOMMENT;
-        }
-    }
-    strcat(dest,yytext);
-}
+
 {ESC} {
     if(tokenOn==1){
         switch(state){
