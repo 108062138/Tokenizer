@@ -5,12 +5,6 @@
 2:"123	"
 #string:"int a"
 #string:"/**/"
-#op:/
-#op:/
-#id:david
-#id:heheahha
-#op:*
-#op:/
 3:"int a" "/**/" //david~~~~ heheahha~~~ */
 4:/* \n\a\b\c\t\ff"~~~~_AAAA"
 5: * auto text
@@ -40,8 +34,6 @@
 #op:=
 #string:"~\'\"\"\"\"\""
 #id:pins
-#op:/
-#op:/
 10: */  		*int*string*int;/*dddd*/*+++++++----==++-=-="~\'\"\"\"\"\""pins			//
 #string:"tmp \" hah\"\" \t \a he	he\'"
 #key:int

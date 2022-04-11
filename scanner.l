@@ -152,6 +152,35 @@ RSTARCOMMENT ("*/")
     }
     strcat(dest,yytext);
 }
+"*//"    {
+    if(tokenOn==1){
+        if(debugFlag==1){
+            printf("\nMEET RSTAR~~~\n");
+            printf("\nat RSTAR, currentState = %d and the process str = %s\n", state, yytext);
+        }
+        switch(state){
+            case STRING:
+                printf("%s", yytext);
+                break;
+            case SCOMMENT:
+                break;
+            case MCOMMENT:
+                if(debugFlag==1)printf("END MUL. LINE COMMENT\n");
+                state=NONE;
+                break;
+            default:
+                if(firstLine==1){
+                    firstLine=0;
+                    printf("#op:*");
+                    state= SCOMMENT;
+                }else {
+                    printf("\n#op:*");
+                    state= SCOMMENT;
+                }
+        }
+    }
+    strcat(dest,yytext);
+}
 "*/"    {
     if(tokenOn==1){
         if(debugFlag==1){
@@ -182,7 +211,22 @@ RSTARCOMMENT ("*/")
     strcat(dest,yytext);
 }
 
-
+{COMMENT} {
+    if(tokenOn==1){
+        switch(state){
+            case STRING:
+                printf("%s",yytext);
+                break;
+            case SCOMMENT:
+            case MCOMMENT:
+                break;
+            default:
+                if(debugFlag==1)printf("START SINGLE LINE COMMENT\n");
+                state=SCOMMENT;
+        }
+    }
+    strcat(dest,yytext);
+}
 {ESC} {
     if(tokenOn==1){
         switch(state){
@@ -307,6 +351,7 @@ RSTARCOMMENT ("*/")
                     firstLine=0;
                     printf("#op:%s",yytext);
                 }else {
+                    
                     printf("\n#op:%s",yytext);
                 }
         }
