@@ -143,11 +143,6 @@ RSTARCOMMENT ("*/")
             default:
                 state=MCOMMENT;
                 if(debugFlag==1)printf("\nSTART MUL. LINE COMMENT!\n");
-                if(firstLine==1){
-                    if(firstLine==1){
-                        firstLine=0;
-                    }
-                }
         }
     }
     strcat(dest,yytext);
@@ -167,6 +162,35 @@ RSTARCOMMENT ("*/")
             case MCOMMENT:
                 if(debugFlag==1)printf("END MUL. LINE COMMENT\n");
                 state=MCOMMENT;
+                break;
+            default:
+                if(firstLine==1){
+                    firstLine=0;
+                    printf("#op:*");
+                    state= SCOMMENT;
+                }else {
+                    printf("\n#op:*");
+                    state= SCOMMENT;
+                }
+        }
+    }
+    strcat(dest,yytext);
+}
+"*///"    {
+    if(tokenOn==1){
+        if(debugFlag==1){
+            printf("\nMEET RSTAR~~~\n");
+            printf("\nat RSTAR, currentState = %d and the process str = %s\n", state, yytext);
+        }
+        switch(state){
+            case STRING:
+                printf("%s", yytext);
+                break;
+            case SCOMMENT:
+                break;
+            case MCOMMENT:
+                if(debugFlag==1)printf("END MUL. LINE COMMENT\n");
+                state=SCOMMENT;
                 break;
             default:
                 if(firstLine==1){
@@ -206,6 +230,28 @@ RSTARCOMMENT ("*/")
                     printf("\n#op:*");
                     state= SCOMMENT;
                 }
+        }
+    }
+    strcat(dest,yytext);
+}
+"/*/"    {
+    if(tokenOn==1){
+        if(debugFlag==1){
+            printf("\nMEET RSTAR~~~\n");
+            printf("\nat RSTAR, currentState = %d and the process str = %s\n", state, yytext);
+        }
+        switch(state){
+            case STRING:
+                printf("%s", yytext);
+                break;
+            case SCOMMENT:
+                break;
+            case MCOMMENT:
+                if(debugFlag==1)printf("END MUL. LINE COMMENT\n");
+                state=NONE;
+                break;
+            default:
+                state = MCOMMENT;
         }
     }
     strcat(dest,yytext);

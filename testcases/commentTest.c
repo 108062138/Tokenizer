@@ -1,3 +1,6 @@
+
+//HAHA /* DFDFD///-*/// 
+//*///dtestm
 int a;/*normal line*/
 double k =1.98	;//single quo;! haha \a \b \c \d 
 double j= 25;/* the int result....>_<
