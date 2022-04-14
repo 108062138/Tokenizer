@@ -1,5 +1,5 @@
 'a'	"dddd	  	123"
-"123	"
+"123	"   				"""""a\\\\\\\'\"\x1234567890ABCDEFabcdef\\"
 "int a" "/**/" //david~~~~ heheahha~~~ */
 /* \n\a\b\c\t\ff"~~~~_AAAA"
  * auto text

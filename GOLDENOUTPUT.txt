@@ -2,7 +2,10 @@
 #string:"dddd	  	123"
 1:'a'	"dddd	  	123"
 #string:"123	"
-2:"123	"
+#string:""
+#string:""
+#string:"a\\\\\\\'\"\x1234567890ABCDEFabcdef\\"
+2:"123	"   				"""""a\\\\\\\'\"\x1234567890ABCDEFabcdef\\"
 #string:"int a"
 #string:"/**/"
 3:"int a" "/**/" //david~~~~ heheahha~~~ */
@@ -131,3 +134,4 @@
 #punc:}
 #punc:}
 #punc:}
+23:    "<>~~<>?"}}}}
