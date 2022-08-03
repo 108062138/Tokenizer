@@ -1,7 +1,10 @@
-Tokenizer
-=== 
-108062138 Po-Yu,Wu 
-source code: https://github.com/108062138/Tokenizer.git
+# Tokenizer
+> by popo
+## abstract
+- This project is about the first project in LJK-NTHU-COMPILER class. It aims to convert `.c` file into tokens. Those token will be utilized in the second project
+## how to run this project
+- type `chmod 777 run.sh` to enable the the shell script in the current working directory
+- `./run.sh` to automically test all the testbench under `/testcases` folder
 
 ## PRAGMA NOTES:
 - It is composed of three parts:conclusion, pragma source, and pragma token. The idea about pragma is shown in the conclusion part. As for the each detailed effect, see pragama source and pragma token part. 
